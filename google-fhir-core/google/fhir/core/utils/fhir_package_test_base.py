@@ -956,7 +956,7 @@ def mock_resource_collection_containing(
   }
 
   def mock_get(uri: str) -> message.Message:
-    return resources.get(uri)
+    return resources.get(uri)  # pytype: disable=bad-return-type
 
   mock_collection.get.side_effect = mock_get
 

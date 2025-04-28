@@ -267,7 +267,7 @@ class ColumnExpressionBuilder:
     item = self._builder[key]
     if isinstance(item, expressions.Builder) and self._sealed:
       raise self._fhir_path_sealed_error(key)
-    return ColumnExpressionBuilder._wrap_any(self, item)
+    return ColumnExpressionBuilder._wrap_any(self, item)  # pytype: disable=bad-return-type
 
   def _to_string(
       self, builder: 'ColumnExpressionBuilder', indent: int = 0
@@ -367,7 +367,7 @@ class ColumnExpressionBuilder:
 
     operand = rhs.builder if isinstance(rhs, type(self)) else rhs
     result = getattr(self._builder, operation_name)(operand)
-    return ColumnExpressionBuilder._wrap_any(self, result)
+    return ColumnExpressionBuilder._wrap_any(self, result)  # pytype: disable=bad-return-type
 
   def _fhir_path_sealed_error(self, execution_name: str):
     return AttributeError(
