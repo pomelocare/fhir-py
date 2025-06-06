@@ -873,7 +873,10 @@ class _FhirPathCstVisitor(FhirPathVisitor):
     # A value of expression (, expression)*; propagate, collect, and return
     result: List[Expression] = []
     for i in range(ctx.getChildCount()):
-      result.append(self.visit(ctx.getChild(i)))
+      child_result = self.visit(ctx.getChild(i))
+      # Filter out None values that can come from visiting terminal nodes (e.g., commas)
+      if child_result is not None:
+        result.append(child_result)
     return result
 
   def visitQuantity(self, ctx: FhirPathParser.QuantityContext) -> Quantity:
@@ -916,8 +919,11 @@ class _FhirPathCstVisitor(FhirPathVisitor):
     # single dot delimited ('.') identifier.
     result: List[str] = []
     for i in range(ctx.getChildCount()):
-      id_: Identifier = self.visit(ctx.getChild(i))
-      result.append(id_.value)
+      child_result = self.visit(ctx.getChild(i))
+      # Filter out None values that can come from visiting terminal nodes (e.g., dots)
+      if child_result is not None:
+        id_: Identifier = child_result
+        result.append(id_.value)
     return Identifier('.'.join(result))
 
   def visitIdentifier(
@@ -947,6 +953,7 @@ class FhirPathAstBaseVisitor(abc.ABC):
 
   def visit(self, node: AbstractSyntaxTree, **kwargs: Any) -> Any:
     """Calls `node.accept`, passing the caller as a visitor."""
+    
     return node.accept(self, **kwargs)
 
   def visit_children(
