@@ -5,12 +5,13 @@ Users in interested in analyzing FHIR data should reference the
 work with FHIR data represented in protocol buffers in PYthon code.
 
 ## FHIR JSON to and from Protocol Buffers
+
 The `json_format` package supports converting FHIR protocol buffers to and
 from the FHIR JSON format. Here are some simple examples:
 
 ```py
 from google.fhir.r4 import json_format
-from google.fhir.r4.proto.core.resources import patient_pb2
+from proto.google.fhir.proto.r4.core.resources import patient_pb2
 
 patient_json = """
 {
@@ -32,6 +33,7 @@ json_format.print_fhir_to_json_string(patient)
 ```
 
 ## FHIRPath support
+
 FHIRPath is the basis of the `google-fhir-views` logic, but can also be used
 directly against FHIR protos themselves. Here is an example:
 

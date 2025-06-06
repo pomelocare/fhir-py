@@ -23,7 +23,7 @@ from typing import Optional, TypeVar, cast
 
 from google.protobuf import descriptor
 from google.protobuf import message
-from google.fhir.core.proto import annotations_pb2
+from proto.google.fhir.proto import annotations_pb2
 from google.fhir.core import fhir_errors
 from google.fhir.core.utils import annotation_utils
 from google.fhir.core.utils import fhir_types

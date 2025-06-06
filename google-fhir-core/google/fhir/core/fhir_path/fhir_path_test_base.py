@@ -16,9 +16,9 @@
 
 from typing import List, Optional, Union
 
-from google.fhir.r4.proto.core import codes_pb2
-from google.fhir.r4.proto.core import datatypes_pb2
-from google.fhir.r4.proto.core.resources import structure_definition_pb2
+from proto.google.fhir.proto.r4.core import codes_pb2
+from proto.google.fhir.proto.r4.core import datatypes_pb2
+from proto.google.fhir.proto.r4.core.resources import structure_definition_pb2
 from google.fhir.core.fhir_path import _fhir_path_data_types
 from google.fhir.core.fhir_path import _structure_definitions as sdefs
 from google.fhir.core.fhir_path import context as context_lib

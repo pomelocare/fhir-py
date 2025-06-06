@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Convenience functions for examining message type."""
-from google.fhir.core.proto import annotations_pb2
+from proto.google.fhir.proto import annotations_pb2
 from google.fhir.core.utils import annotation_utils
 
 _BOOLEAN_STRUCTURE_DEFINITION_URL = 'http://hl7.org/fhir/StructureDefinition/boolean'

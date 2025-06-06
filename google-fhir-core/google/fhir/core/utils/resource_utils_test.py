@@ -15,11 +15,11 @@
 """Test resource_utils functionality."""
 
 from absl.testing import absltest
-from google.fhir.r4.proto.core import datatypes_pb2
-from google.fhir.r4.proto.core.resources import account_pb2
-from google.fhir.r4.proto.core.resources import activity_definition_pb2
-from google.fhir.r4.proto.core.resources import bundle_and_contained_resource_pb2
-from google.fhir.r4.proto.core.resources import structure_definition_pb2
+from proto.google.fhir.proto.r4.core import datatypes_pb2
+from proto.google.fhir.proto.r4.core.resources import account_pb2
+from proto.google.fhir.proto.r4.core.resources import activity_definition_pb2
+from proto.google.fhir.proto.r4.core.resources import bundle_and_contained_resource_pb2
+from proto.google.fhir.proto.r4.core.resources import structure_definition_pb2
 from google.fhir.core.utils import resource_utils
 
 # TODO(b/176912972): These util tests should not be FHIR-specific.

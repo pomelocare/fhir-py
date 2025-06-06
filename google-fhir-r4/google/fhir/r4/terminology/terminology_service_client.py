@@ -22,7 +22,7 @@ import requests
 import requests.adapters
 import requests.packages
 
-from google.fhir.r4.proto.core.resources import value_set_pb2
+from proto.google.fhir.proto.r4.core.resources import value_set_pb2
 from google.fhir.core.utils import url_utils
 from google.fhir.r4 import json_format
 

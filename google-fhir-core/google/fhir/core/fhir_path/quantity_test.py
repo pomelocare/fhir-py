@@ -13,7 +13,7 @@
 # limitations under the License.
 import decimal
 from absl.testing import absltest
-from google.fhir.r4.proto.core import datatypes_pb2
+from proto.google.fhir.proto.r4.core import datatypes_pb2
 from google.fhir.core.fhir_path import quantity
 
 

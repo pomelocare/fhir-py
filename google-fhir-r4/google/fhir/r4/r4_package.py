@@ -16,10 +16,10 @@
 
 from typing import BinaryIO, Iterable
 
-from google.fhir.r4.proto.core.resources import code_system_pb2
-from google.fhir.r4.proto.core.resources import search_parameter_pb2
-from google.fhir.r4.proto.core.resources import structure_definition_pb2
-from google.fhir.r4.proto.core.resources import value_set_pb2
+from proto.google.fhir.proto.r4.core.resources import code_system_pb2
+from proto.google.fhir.proto.r4.core.resources import search_parameter_pb2
+from proto.google.fhir.proto.r4.core.resources import structure_definition_pb2
+from proto.google.fhir.proto.r4.core.resources import value_set_pb2
 from google.fhir.core.utils import fhir_package
 from google.fhir.r4 import primitive_handler
 

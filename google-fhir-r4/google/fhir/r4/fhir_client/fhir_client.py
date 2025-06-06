@@ -15,7 +15,7 @@
 """Provides a client for interacting with FHIR servers returning the protobuf representations of FHIR."""
 import json
 
-from google.fhir.r4.proto.core.resources import bundle_and_contained_resource_pb2
+from proto.google.fhir.proto.r4.core.resources import bundle_and_contained_resource_pb2
 from google.fhir.r4 import json_format
 from google.fhir.r4.fhir_client import _fhir_client
 

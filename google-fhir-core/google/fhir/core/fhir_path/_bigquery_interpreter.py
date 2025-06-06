@@ -20,7 +20,7 @@ from typing import Any, Optional
 from google.cloud import bigquery
 
 from google.protobuf import descriptor
-from google.fhir.r4.proto.core.resources import bundle_and_contained_resource_pb2
+from proto.google.fhir.proto.r4.core.resources import bundle_and_contained_resource_pb2
 from google.fhir.core.fhir_path import _ast
 from google.fhir.core.fhir_path import _bigquery_sql_functions
 from google.fhir.core.fhir_path import _evaluation

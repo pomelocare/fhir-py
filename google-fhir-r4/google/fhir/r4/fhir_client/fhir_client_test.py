@@ -18,9 +18,9 @@
 import unittest.mock
 
 from absl.testing import absltest
-from google.fhir.r4.proto.core import codes_pb2
-from google.fhir.r4.proto.core import datatypes_pb2
-from google.fhir.r4.proto.core.resources import bundle_and_contained_resource_pb2
+from proto.google.fhir.proto.r4.core import codes_pb2
+from proto.google.fhir.proto.r4.core import datatypes_pb2
+from proto.google.fhir.proto.r4.core.resources import bundle_and_contained_resource_pb2
 from google.fhir.r4.fhir_client import _fhir_client
 from google.fhir.r4.fhir_client import fhir_client
 

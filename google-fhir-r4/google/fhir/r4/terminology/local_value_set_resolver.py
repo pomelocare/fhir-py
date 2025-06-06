@@ -20,8 +20,8 @@ from typing import Iterable, List, Optional, Sequence
 
 import logging
 
-from google.fhir.r4.proto.core.resources import code_system_pb2
-from google.fhir.r4.proto.core.resources import value_set_pb2
+from proto.google.fhir.proto.r4.core.resources import code_system_pb2
+from proto.google.fhir.proto.r4.core.resources import value_set_pb2
 from google.fhir.core.utils import fhir_package
 from google.fhir.core.utils import proto_utils
 from google.fhir.core.utils import url_utils

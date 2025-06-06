@@ -23,12 +23,12 @@ from google.cloud import bigquery
 
 from absl.testing import absltest
 from absl.testing import parameterized
-from google.fhir.core.proto import fhirpath_replacement_list_pb2
-from google.fhir.core.proto import validation_pb2
-from google.fhir.r4.proto.core import codes_pb2
-from google.fhir.r4.proto.core import datatypes_pb2
-from google.fhir.r4.proto.core.resources import structure_definition_pb2
-from google.fhir.r4.proto.core.resources import value_set_pb2
+from proto.google.fhir.proto import fhirpath_replacement_list_pb2
+from proto.google.fhir.proto import validation_pb2
+from proto.google.fhir.proto.r4.core import codes_pb2
+from proto.google.fhir.proto.r4.core import datatypes_pb2
+from proto.google.fhir.proto.r4.core.resources import structure_definition_pb2
+from proto.google.fhir.proto.r4.core.resources import value_set_pb2
 from google.fhir.core import fhir_errors
 from google.fhir.core.fhir_path import _bigquery_interpreter
 from google.fhir.core.fhir_path import _evaluation
