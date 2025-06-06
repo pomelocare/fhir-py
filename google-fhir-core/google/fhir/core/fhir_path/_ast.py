@@ -873,8 +873,6 @@ class _FhirPathCstVisitor(FhirPathVisitor):
     # A value of expression (, expression)*; propagate, collect, and return
     result: List[Expression] = []
     for i in range(ctx.getChildCount()):
-      if isinstance(ctx.getChild(i), tree.Tree.TerminalNode):
-          continue
       result.append(self.visit(ctx.getChild(i)))
     return result
 
@@ -882,7 +880,7 @@ class _FhirPathCstVisitor(FhirPathVisitor):
     # Note: This is an ambiguity in the FHIRPath CFG. Both quantity *and*
     # NUMBER are visited within the same literal production. Therefore, a
     # `quantity` production will always have a unit.
-    return Quantity(self.visit(ctx.NUMBER()), self.visit(ctx.unit()))
+    return Quantity(ctx.getChild(0).getText(), self.visit(ctx.unit()))
 
   def visitUnit(self, ctx: FhirPathParser.UnitContext) -> str:
     # A value of dateTimePrecision | pluralDateTimePrecision | STRING. Propagate
@@ -896,13 +894,13 @@ class _FhirPathCstVisitor(FhirPathVisitor):
       self, ctx: FhirPathParser.DateTimePrecisionContext
   ) -> str:
     # Remove leading and trailing single quotations.
-    return str(ctx.getChild(0).getText())
+    return str(ctx.getChild(0).getText())[1:-1]
 
   def visitPluralDateTimePrecision(
       self, ctx: FhirPathParser.PluralDateTimePrecisionContext
   ) -> str:
     # Remove leading and trailing single quotations.
-    return str(ctx.getChild(0).getText())
+    return str(ctx.getChild(0).getText())[1:-1]
 
   def visitTypeSpecifier(
       self, ctx: FhirPathParser.TypeSpecifierContext
@@ -918,8 +916,6 @@ class _FhirPathCstVisitor(FhirPathVisitor):
     # single dot delimited ('.') identifier.
     result: List[str] = []
     for i in range(ctx.getChildCount()):
-      if isinstance(ctx.getChild(i), tree.Tree.TerminalNode):
-          continue
       id_: Identifier = self.visit(ctx.getChild(i))
       result.append(id_.value)
     return Identifier('.'.join(result))
@@ -951,7 +947,6 @@ class FhirPathAstBaseVisitor(abc.ABC):
 
   def visit(self, node: AbstractSyntaxTree, **kwargs: Any) -> Any:
     """Calls `node.accept`, passing the caller as a visitor."""
-    
     return node.accept(self, **kwargs)
 
   def visit_children(
