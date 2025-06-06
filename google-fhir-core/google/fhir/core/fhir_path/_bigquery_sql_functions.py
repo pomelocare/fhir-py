@@ -21,7 +21,7 @@ import functools
 import operator
 from typing import Any, Dict, List, Optional
 
-from google.fhir.r4.proto.core.resources import value_set_pb2
+from proto.google.fhir.proto.r4.core.resources import value_set_pb2
 from google.fhir.core.fhir_path import _evaluation
 from google.fhir.core.fhir_path import _fhir_path_data_types
 from google.fhir.core.fhir_path import _sql_data_types

@@ -24,7 +24,7 @@ from typing import Iterable, Optional, Union, cast
 from google.cloud import bigquery
 import pandas
 
-from google.fhir.r4.proto.core.resources import value_set_pb2
+from proto.google.fhir.proto.r4.core.resources import value_set_pb2
 from google.fhir.core.fhir_path import _bigquery_interpreter
 from google.fhir.core.fhir_path import _fhir_path_data_types
 from google.fhir.r4.terminology import terminology_service_client

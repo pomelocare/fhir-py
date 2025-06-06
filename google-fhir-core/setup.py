@@ -79,10 +79,11 @@ def main():
   if version is None:
     raise RuntimeError('FHIR_PY_VERSION must be set to build this package.')
 
-  protoc_command = _get_protoc_command()
-  proto_files = glob.glob('google/fhir/core/proto/*.proto')
-  for proto_file in proto_files:
-    _generate_proto(protoc_command, proto_file)
+  # NOTE(rob): Skip protos, we use our generated ones.
+  # protoc_command = _get_protoc_command()
+  # proto_files = glob.glob('google/fhir/core/proto/*.proto')
+  # for proto_file in proto_files:
+  #   _generate_proto(protoc_command, proto_file)
 
   setuptools.setup(
       name='google-fhir-core',
@@ -100,7 +101,7 @@ def main():
       python_requires='>=3.8, <3.12',
       install_requires=[
           'absl-py~=1.1',
-          'antlr4-python3-runtime~=4.9.3',
+          'antlr4-python3-runtime>=4.13.2',
           'backports.zoneinfo~=0.2.1;python_version<"3.9"',
           'immutabledict~=2.2',
           'protobuf~=4.23',

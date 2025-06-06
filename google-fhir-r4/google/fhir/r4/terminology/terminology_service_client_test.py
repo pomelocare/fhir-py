@@ -18,7 +18,7 @@ import json
 import unittest.mock
 
 from absl.testing import absltest
-from google.fhir.r4.proto.core.resources import value_set_pb2
+from proto.google.fhir.proto.r4.core.resources import value_set_pb2
 from google.fhir.r4.terminology import terminology_service_client
 
 

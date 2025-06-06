@@ -20,9 +20,9 @@ import pandas as pd
 
 from google.protobuf import message_factory
 from absl.testing import absltest
-from google.fhir.r4.proto.core.resources import bundle_and_contained_resource_pb2
-from google.fhir.r4.proto.core.resources import observation_pb2
-from google.fhir.r4.proto.core.resources import patient_pb2
+from proto.google.fhir.proto.r4.core.resources import bundle_and_contained_resource_pb2
+from proto.google.fhir.proto.r4.core.resources import observation_pb2
+from proto.google.fhir.proto.r4.core.resources import patient_pb2
 from google.fhir.core.fhir_path import context
 from google.fhir.r4 import r4_package
 from google.fhir.r4.fhir_client import fhir_client

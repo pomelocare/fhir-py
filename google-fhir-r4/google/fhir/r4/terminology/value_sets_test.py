@@ -19,10 +19,10 @@ from unittest import mock
 from google.protobuf import message
 from google.protobuf import text_format
 from absl.testing import absltest
-from google.fhir.r4.proto.core.resources import code_system_pb2
-from google.fhir.r4.proto.core.resources import search_parameter_pb2
-from google.fhir.r4.proto.core.resources import structure_definition_pb2
-from google.fhir.r4.proto.core.resources import value_set_pb2
+from proto.google.fhir.proto.r4.core.resources import code_system_pb2
+from proto.google.fhir.proto.r4.core.resources import search_parameter_pb2
+from proto.google.fhir.proto.r4.core.resources import structure_definition_pb2
+from proto.google.fhir.proto.r4.core.resources import value_set_pb2
 from google.fhir.core.utils import fhir_package
 from google.fhir.r4 import primitive_handler
 from google.fhir.r4 import r4_package

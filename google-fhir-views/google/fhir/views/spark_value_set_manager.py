@@ -18,7 +18,7 @@ from typing import Iterable, Optional, Union
 import sqlalchemy
 from sqlalchemy import engine
 
-from google.fhir.r4.proto.core.resources import value_set_pb2
+from proto.google.fhir.proto.r4.core.resources import value_set_pb2
 from google.fhir.r4.terminology import terminology_service_client
 from google.fhir.r4.terminology import value_set_tables
 from google.fhir.r4.terminology import value_sets

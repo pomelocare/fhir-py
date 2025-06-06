@@ -15,10 +15,10 @@
 """Test fhir_types functionality."""
 
 from absl.testing import absltest
-from google.fhir.r4.proto import fhirproto_extensions_pb2
-from google.fhir.r4.proto import uscore_pb2
-from google.fhir.r4.proto.core import datatypes_pb2
-from google.fhir.r4.proto.core.resources import patient_pb2
+from proto.google.fhir.proto.r4 import fhirproto_extensions_pb2
+from proto.google.fhir.proto.r4 import uscore_pb2
+from proto.google.fhir.proto.r4.core import datatypes_pb2
+from proto.google.fhir.proto.r4.core.resources import patient_pb2
 from google.fhir.core.utils import fhir_types
 
 

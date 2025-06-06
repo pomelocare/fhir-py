@@ -93,11 +93,12 @@ def main():
   if version is None:
     raise RuntimeError('FHIR_PY_VERSION must be set to build this package.')
 
-  protoc_command = _get_protoc_command()
-  for proto_file in glob.glob(
-      'google/fhir/r4/proto/**/*.proto', recursive=True
-  ):
-    _generate_proto(protoc_command, proto_file)
+  # NOTE(rob): Skip protos, we use our generated ones.
+  # protoc_command = _get_protoc_command()
+  # for proto_file in glob.glob(
+  #     'google/fhir/r4/proto/**/*.proto', recursive=True
+  # ):
+  #   _generate_proto(protoc_command, proto_file)
 
   absolute_package_path = pathlib.Path(package_dir).joinpath(_FHIR_PACKAGE_PATH)
 

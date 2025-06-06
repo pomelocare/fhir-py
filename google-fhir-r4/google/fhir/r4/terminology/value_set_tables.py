@@ -24,7 +24,7 @@ from typing import Collection, Dict, Iterable, Tuple
 import logging
 import sqlalchemy
 
-from google.fhir.r4.proto.core.resources import value_set_pb2
+from proto.google.fhir.proto.r4.core.resources import value_set_pb2
 
 
 def valueset_codes_insert_statement_for(

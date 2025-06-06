@@ -19,7 +19,7 @@ import unittest.mock
 
 from absl.testing import absltest
 from absl.testing import parameterized
-from google.fhir.r4.proto.core.resources import value_set_pb2
+from proto.google.fhir.proto.r4.core.resources import value_set_pb2
 from google.fhir.core.fhir_path import _spark_interpreter
 from google.fhir.core.fhir_path import fhir_path_test_base
 from google.fhir.core.utils import fhir_package

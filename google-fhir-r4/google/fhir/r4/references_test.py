@@ -15,7 +15,7 @@
 """Tests for the references module."""
 
 from absl.testing import absltest
-from google.fhir.r4.proto.core import datatypes_pb2
+from proto.google.fhir.proto.r4.core import datatypes_pb2
 from google.fhir.core import references
 from google.fhir.core.utils import proto_utils
 

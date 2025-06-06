@@ -17,9 +17,9 @@
 from typing import Any, Dict, Optional, Type
 
 from google.protobuf import message
-from google.fhir.r4.proto import fhirproto_extensions_pb2
-from google.fhir.r4.proto.core import datatypes_pb2
-from google.fhir.r4.proto.core.resources import bundle_and_contained_resource_pb2
+from proto.google.fhir.proto.r4 import fhirproto_extensions_pb2
+from proto.google.fhir.proto.r4.core import datatypes_pb2
+from proto.google.fhir.proto.r4.core.resources import bundle_and_contained_resource_pb2
 from google.fhir.core.internal import _primitive_time_utils
 from google.fhir.core.internal import primitive_handler
 from google.fhir.core.internal.json_format.wrappers import _base64_binary
