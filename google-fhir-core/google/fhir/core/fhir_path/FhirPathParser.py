@@ -236,6 +236,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitIndexerExpression" ):
                 listener.exitIndexerExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndexerExpression" ):
+                return visitor.visitIndexerExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class PolarityExpressionContext(ExpressionContext):
 
@@ -254,6 +260,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPolarityExpression" ):
                 listener.exitPolarityExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPolarityExpression" ):
+                return visitor.visitPolarityExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class AdditiveExpressionContext(ExpressionContext):
@@ -277,6 +289,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitAdditiveExpression" ):
                 listener.exitAdditiveExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAdditiveExpression" ):
+                return visitor.visitAdditiveExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class MultiplicativeExpressionContext(ExpressionContext):
 
@@ -298,6 +316,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMultiplicativeExpression" ):
                 listener.exitMultiplicativeExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMultiplicativeExpression" ):
+                return visitor.visitMultiplicativeExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class UnionExpressionContext(ExpressionContext):
@@ -321,6 +345,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitUnionExpression" ):
                 listener.exitUnionExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnionExpression" ):
+                return visitor.visitUnionExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class OrExpressionContext(ExpressionContext):
 
@@ -342,6 +372,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOrExpression" ):
                 listener.exitOrExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOrExpression" ):
+                return visitor.visitOrExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class AndExpressionContext(ExpressionContext):
@@ -365,6 +401,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitAndExpression" ):
                 listener.exitAndExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAndExpression" ):
+                return visitor.visitAndExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class MembershipExpressionContext(ExpressionContext):
 
@@ -386,6 +428,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMembershipExpression" ):
                 listener.exitMembershipExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMembershipExpression" ):
+                return visitor.visitMembershipExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class InequalityExpressionContext(ExpressionContext):
@@ -409,6 +457,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitInequalityExpression" ):
                 listener.exitInequalityExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInequalityExpression" ):
+                return visitor.visitInequalityExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class InvocationExpressionContext(ExpressionContext):
 
@@ -430,6 +484,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInvocationExpression" ):
                 listener.exitInvocationExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInvocationExpression" ):
+                return visitor.visitInvocationExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class EqualityExpressionContext(ExpressionContext):
@@ -453,6 +513,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitEqualityExpression" ):
                 listener.exitEqualityExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEqualityExpression" ):
+                return visitor.visitEqualityExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class ImpliesExpressionContext(ExpressionContext):
 
@@ -475,6 +541,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitImpliesExpression" ):
                 listener.exitImpliesExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitImpliesExpression" ):
+                return visitor.visitImpliesExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class TermExpressionContext(ExpressionContext):
 
@@ -493,6 +565,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTermExpression" ):
                 listener.exitTermExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTermExpression" ):
+                return visitor.visitTermExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class TypeExpressionContext(ExpressionContext):
@@ -515,6 +593,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeExpression" ):
                 listener.exitTypeExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeExpression" ):
+                return visitor.visitTypeExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -810,6 +894,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitExternalConstantTerm" ):
                 listener.exitExternalConstantTerm(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExternalConstantTerm" ):
+                return visitor.visitExternalConstantTerm(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class LiteralTermContext(TermContext):
 
@@ -828,6 +918,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLiteralTerm" ):
                 listener.exitLiteralTerm(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLiteralTerm" ):
+                return visitor.visitLiteralTerm(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class ParenthesizedTermContext(TermContext):
@@ -848,6 +944,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitParenthesizedTerm" ):
                 listener.exitParenthesizedTerm(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParenthesizedTerm" ):
+                return visitor.visitParenthesizedTerm(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class InvocationTermContext(TermContext):
 
@@ -866,6 +968,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInvocationTerm" ):
                 listener.exitInvocationTerm(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInvocationTerm" ):
+                return visitor.visitInvocationTerm(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -951,6 +1059,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitTimeLiteral" ):
                 listener.exitTimeLiteral(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTimeLiteral" ):
+                return visitor.visitTimeLiteral(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class NullLiteralContext(LiteralContext):
 
@@ -966,6 +1080,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNullLiteral" ):
                 listener.exitNullLiteral(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNullLiteral" ):
+                return visitor.visitNullLiteral(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class DateTimeLiteralContext(LiteralContext):
@@ -985,6 +1105,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitDateTimeLiteral" ):
                 listener.exitDateTimeLiteral(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDateTimeLiteral" ):
+                return visitor.visitDateTimeLiteral(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class StringLiteralContext(LiteralContext):
 
@@ -1002,6 +1128,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStringLiteral" ):
                 listener.exitStringLiteral(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStringLiteral" ):
+                return visitor.visitStringLiteral(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class DateLiteralContext(LiteralContext):
@@ -1021,6 +1153,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitDateLiteral" ):
                 listener.exitDateLiteral(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDateLiteral" ):
+                return visitor.visitDateLiteral(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class BooleanLiteralContext(LiteralContext):
 
@@ -1036,6 +1174,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBooleanLiteral" ):
                 listener.exitBooleanLiteral(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBooleanLiteral" ):
+                return visitor.visitBooleanLiteral(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class NumberLiteralContext(LiteralContext):
@@ -1055,6 +1199,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitNumberLiteral" ):
                 listener.exitNumberLiteral(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNumberLiteral" ):
+                return visitor.visitNumberLiteral(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class QuantityLiteralContext(LiteralContext):
 
@@ -1073,6 +1223,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitQuantityLiteral" ):
                 listener.exitQuantityLiteral(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQuantityLiteral" ):
+                return visitor.visitQuantityLiteral(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1183,6 +1339,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitExternalConstant" ):
                 listener.exitExternalConstant(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExternalConstant" ):
+                return visitor.visitExternalConstant(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1249,6 +1411,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitTotalInvocation" ):
                 listener.exitTotalInvocation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTotalInvocation" ):
+                return visitor.visitTotalInvocation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class ThisInvocationContext(InvocationContext):
 
@@ -1265,6 +1433,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitThisInvocation" ):
                 listener.exitThisInvocation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitThisInvocation" ):
+                return visitor.visitThisInvocation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class IndexInvocationContext(InvocationContext):
 
@@ -1280,6 +1454,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIndexInvocation" ):
                 listener.exitIndexInvocation(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndexInvocation" ):
+                return visitor.visitIndexInvocation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class FunctionInvocationContext(InvocationContext):
@@ -1300,6 +1480,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitFunctionInvocation" ):
                 listener.exitFunctionInvocation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionInvocation" ):
+                return visitor.visitFunctionInvocation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class MemberInvocationContext(InvocationContext):
 
@@ -1318,6 +1504,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMemberInvocation" ):
                 listener.exitMemberInvocation(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMemberInvocation" ):
+                return visitor.visitMemberInvocation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1400,6 +1592,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitFunction" ):
                 listener.exitFunction(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunction" ):
+                return visitor.visitFunction(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1457,6 +1655,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitParamList" ):
                 listener.exitParamList(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParamList" ):
+                return visitor.visitParamList(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1516,6 +1720,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitQuantity" ):
                 listener.exitQuantity(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQuantity" ):
+                return visitor.visitQuantity(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1572,6 +1782,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnit" ):
                 listener.exitUnit(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnit" ):
+                return visitor.visitUnit(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1630,6 +1846,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitDateTimePrecision" ):
                 listener.exitDateTimePrecision(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDateTimePrecision" ):
+                return visitor.visitDateTimePrecision(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1674,6 +1896,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPluralDateTimePrecision" ):
                 listener.exitPluralDateTimePrecision(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPluralDateTimePrecision" ):
+                return visitor.visitPluralDateTimePrecision(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1723,6 +1951,12 @@ class FhirPathParser ( Parser ):
             if hasattr( listener, "exitTypeSpecifier" ):
                 listener.exitTypeSpecifier(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeSpecifier" ):
+                return visitor.visitTypeSpecifier(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1767,6 +2001,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitQualifiedIdentifier" ):
                 listener.exitQualifiedIdentifier(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQualifiedIdentifier" ):
+                return visitor.visitQualifiedIdentifier(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1824,6 +2064,12 @@ class FhirPathParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIdentifier" ):
                 listener.exitIdentifier(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdentifier" ):
+                return visitor.visitIdentifier(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
