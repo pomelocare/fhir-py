@@ -75,7 +75,7 @@ def main():
   namespace_packages = setuptools.find_namespace_packages(where=package_dir)
   long_description = pathlib.Path(package_dir).joinpath('README.md').read_text()
 
-  version = os.environ.get('FHIR_PY_VERSION')
+  version = "0.11.1"
   if version is None:
     raise RuntimeError('FHIR_PY_VERSION must be set to build this package.')
 
