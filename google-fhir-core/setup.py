@@ -104,7 +104,7 @@ def main():
           'antlr4-python3-runtime>=4.13.2',
           'backports.zoneinfo~=0.2.1;python_version<"3.9"',
           'immutabledict~=2.2',
-          'protobuf~=4.23',
+          'protobuf>=4.23',
           'python-dateutil~=2.8',
           'stringcase==1.2.0',
       ],
