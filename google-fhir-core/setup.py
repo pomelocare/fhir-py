@@ -110,7 +110,7 @@ def main():
       ],
       # Include proto files so consuming libraries can build protos that
       # use them.
-      data_files=[('', proto_files)],
+      # data_files=[('', proto_files)],
       extras_require={
           'bigquery': [
               'google-cloud-bigquery~=3.1',
