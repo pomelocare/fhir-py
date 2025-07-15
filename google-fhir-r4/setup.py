@@ -119,7 +119,7 @@ def main():
       packages=namespace_packages,
       include_package_data=True,
       license='Apache 2.0',
-      python_requires='>=3.8, <=3.12',
+      python_requires='>=3.8',
       install_requires=[
           f'google-fhir-core~={version}',
           'backports.zoneinfo~=0.2.1;python_version<"3.9"',

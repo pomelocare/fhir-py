@@ -42,7 +42,7 @@ def main():
       packages=namespace_packages,
       include_package_data=True,
       license='Apache 2.0',
-      python_requires='>=3.8, <=3.12',
+      python_requires='>=3.8',
       install_requires=[
           'absl-py~=1.1',
           'deprecated~=1.2',
